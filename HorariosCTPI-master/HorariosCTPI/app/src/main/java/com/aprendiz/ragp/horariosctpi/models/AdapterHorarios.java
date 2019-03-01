@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -88,16 +89,25 @@ public class AdapterHorarios extends RecyclerView.Adapter<AdapterHorarios.Holder
             final TextView txtJuevesItem = itemView.findViewById(R.id.txtItemJueves);
             final TextView txtViernesItem = itemView.findViewById(R.id.txtItemViernes);
 
-            txtLunesItem.setText(horario.getLunes());
-            txtMartesItem.setText(horario.getMartes());
-            txtMiercolesItem.setText(horario.getMiercoles());
-            txtJuevesItem.setText(horario.getJueves());
-            txtViernesItem.setText(horario.getViernes());
+            String nombres []= new String[5];
+            nombres[0]= horario.getLunes().replace(" ","\n");
+            nombres[1]= horario.getMartes().replace(" ","\n");
+            nombres[2]= horario.getMiercoles().replace(" ","\n");
+            nombres[3]= horario.getJueves().replace(" ","\n");
+            nombres[4]= horario.getViernes().replace(" ","\n");
+
+            txtLunesItem.setText(nombres[0]);
+            txtMartesItem.setText(nombres[1]);
+            txtMiercolesItem.setText(nombres[2]);
+            txtJuevesItem.setText(nombres[3]);
+            txtViernesItem.setText(nombres[4]);
+
             txtLunesItem.setTextColor(color);
             txtMartesItem.setTextColor(color);
             txtMiercolesItem.setTextColor(color);
             txtJuevesItem.setTextColor(color);
             txtViernesItem.setTextColor(color);
+
 
             txtLunesItem.setOnClickListener(new View.OnClickListener() {
                 @Override

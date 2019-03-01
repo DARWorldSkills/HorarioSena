@@ -406,7 +406,7 @@ public class MenuPrincipal extends AppCompatActivity implements OnClickListener 
 
 
     private void obtenerTodosLosHorarios(){
-
+        final boolean[] bandera = {false};
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         for (int i = 0 ; i<ambienteList.size();i++){
             DatabaseReference horario = reference.child(ambienteList.get(i).getApodo());
@@ -417,8 +417,12 @@ public class MenuPrincipal extends AppCompatActivity implements OnClickListener 
                     GenericTypeIndicator<ArrayList<Horario>> t = new GenericTypeIndicator<ArrayList<Horario>>(){};
                     listaDeTodos.add(new AmbienteHorario(ambienteList.get(finalI).getNombre(),dataSnapshot.getValue(t)));
                     if (ambienteList.size()==listaDeTodos.size()){
-                        obtenerListaHorarioInstructor();
+
+                        bandera[0] = true;
+                    }else {
+                        bandera[0] =false;
                     }
+                    obtenerListaHorarioInstructor();
                 }
 
                 @Override
@@ -427,11 +431,14 @@ public class MenuPrincipal extends AppCompatActivity implements OnClickListener 
                 }
             });
         }
+
+
     }
 
-
+    //El error esta por aqui
     private void obtenerListaHorarioInstructor() {
         List<String> instructores = new ArrayList<>();
+        listaTodosLosHorarios.clear();
         for (int i=0;i<listaDeTodos.size();i++){
             for (int j=0; j<listaDeTodos.get(i).getHorario().size();j++){
                 Horario horario =listaDeTodos.get(i).getHorario().get(j);
@@ -444,6 +451,8 @@ public class MenuPrincipal extends AppCompatActivity implements OnClickListener 
             }
         }
 
+        //asd
+        Log.e("asd1",listaTodosLosHorarios.get(0).getHorario().getLunes());
         for (int i=0;i<listaTodosLosHorarios.size();i++){
             InstructorHorario instructorHorario = new InstructorHorario();
             Horario horario  = listaTodosLosHorarios.get(i).getHorario();

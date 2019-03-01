@@ -129,7 +129,7 @@ public class HorarioTarde extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -150,7 +150,7 @@ public class HorarioTarde extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -171,7 +171,7 @@ public class HorarioTarde extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -193,7 +193,7 @@ public class HorarioTarde extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -215,7 +215,7 @@ public class HorarioTarde extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -231,7 +231,7 @@ public class HorarioTarde extends AppCompatActivity {
             }
 
             try {
-                Glide.with(HorarioTarde.this).load(MenuPrincipal.iconosM.getVerde()).crossFade().into(imgTarde);
+                Glide.with(HorarioTarde.this).load(MenuPrincipal.iconosT.getNaranja()).crossFade().into(imgTarde);
 
             }catch (Exception e){
 

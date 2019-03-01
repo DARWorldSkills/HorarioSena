@@ -134,7 +134,7 @@ public class HorarioManana extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -155,7 +155,7 @@ public class HorarioManana extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -176,7 +176,7 @@ public class HorarioManana extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -198,7 +198,7 @@ public class HorarioManana extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -220,7 +220,7 @@ public class HorarioManana extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });

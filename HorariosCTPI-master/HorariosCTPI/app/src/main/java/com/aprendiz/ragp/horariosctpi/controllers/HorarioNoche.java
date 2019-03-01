@@ -130,7 +130,7 @@ public class HorarioNoche extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -151,7 +151,7 @@ public class HorarioNoche extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -172,7 +172,7 @@ public class HorarioNoche extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -194,7 +194,7 @@ public class HorarioNoche extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -216,7 +216,7 @@ public class HorarioNoche extends AppCompatActivity {
                     }
 
                     if (MenuPrincipal.abreInstructorList.size()<1 || tmp==0){
-                        llamarHorarios(txtNombre,"No disponible");
+                        llamarHorarios(txtNombre.replace("\n"," "),"No disponible");
                     }
                 }
             });
@@ -234,7 +234,7 @@ public class HorarioNoche extends AppCompatActivity {
 
 
             try {
-                Glide.with(HorarioNoche.this).load(MenuPrincipal.iconosM.getVerde()).crossFade().into(imgNoche);
+                Glide.with(HorarioNoche.this).load(MenuPrincipal.iconosN.getAzul()).crossFade().into(imgNoche);
 
             }catch (Exception e){
 
