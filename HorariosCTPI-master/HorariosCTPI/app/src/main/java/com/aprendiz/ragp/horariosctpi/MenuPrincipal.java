@@ -440,6 +440,7 @@ public class MenuPrincipal extends AppCompatActivity implements OnClickListener 
         List<String> instructores = new ArrayList<>();
         listaTodosLosHorarios.clear();
         for (int i=0;i<listaDeTodos.size();i++){
+            try{
             for (int j=0; j<listaDeTodos.get(i).getHorario().size();j++){
                 Horario horario =listaDeTodos.get(i).getHorario().get(j);
 
@@ -449,10 +450,14 @@ public class MenuPrincipal extends AppCompatActivity implements OnClickListener 
                 }
 
             }
+            }catch (Exception ignored){
+
+            }
+
         }
 
         //asd
-        Log.e("asd1",listaTodosLosHorarios.get(0).getHorario().getLunes());
+
         for (int i=0;i<listaTodosLosHorarios.size();i++){
             InstructorHorario instructorHorario = new InstructorHorario();
             Horario horario  = listaTodosLosHorarios.get(i).getHorario();
@@ -480,7 +485,6 @@ public class MenuPrincipal extends AppCompatActivity implements OnClickListener 
 
         ingresarAbreviacion();
 
-        enConsolaLaPerdicion();
     }
 
 
